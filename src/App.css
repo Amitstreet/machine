@@ -1,0 +1,30 @@
+
+
+
+.image_listing > div {
+  width: 33%;
+}
+
+img{
+  width: 100%;
+}
+
+.image_listing{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.active_img{
+  border: solid;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+
+
