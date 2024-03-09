@@ -1,68 +1,127 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin:0;
+  padding:0;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+body{
+  background-color: lightblue;
+  height: 100vh;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.chatBox{
+  width: 70%;
+  height: 80vh;
+  border-radius: 20px;
+  background-color: skyblue;
+  overflow: hidden;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.chatBox .chatSection{
+  display: grid;
+  grid-template-columns: 350px auto;
+  grid-template-rows: 80vh 80vh;
+}
+.scrollableContact{
+  height: 80vh;
+  overflow-y: scroll;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.scrollableContact::-webkit-scrollbar {
+  width: 8px;   /* vertical scrollbar width */
+  height: 12px; /* horizontal scrollbar height */
+}
+
+.scrollableContact::-webkit-scrollbar-button {
+  height: 100px; /* vertical scrollbar height */
+}
+
+.chatSection .contactSection{
+  background-color: rgb(17,27,33);
+  opacity: 0.9;
+  overflow: hidden;
+}
+
+.chatSection .messageSection{
+  background-color: rgb(17,27,33);
+  opacity: 0.7;
+}
+.contactSearchInputBox{
+  width: 340px;
+  height: 40px;
+  background-color: rgb(48, 48, 48);
+  z-index: 99;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  margin: 5px;
+  position: sticky;
+  top: 0;
+  border-top-left-radius: 5px;
+  padding-left: 10px;
+  box-sizing: content-box;
+}
+
+/* user Contact Styling */
+.mainContactBox{
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-rows: 60px 60px;
+  padding:10px;
+  border-bottom: 1px solid grey;
+  height: 60px;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+.mainContactBox:hover{
+  background-color: rgb(42,57,66);
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.userImg{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.userDetailsBox{
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.userName{
+  font-weight: bold;
+  color: white;
+}
+.userLastMessage{
+  color: grey;
+  margin-top: 5px;
+}
+.userLogoBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* styling of message section */
+.messageText{
+  background-color: rgb(1,92,75);
+  color: white;
+  min-width: 20px;
+  display: inline-block;
+  padding:5px 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.scrollableMessage, .messageSection{
+  width: 54rem;
+  height: 80vh; 
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.sendMessage{
+  height: 40px;
+  padding-left: 10px;
+  background-color: rgb(42,57,66);
+  color: white;
+  outline: none;
 }
