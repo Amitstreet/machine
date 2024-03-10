@@ -13,3 +13,20 @@
     border: solid red;
 }
 
+
+.progress-bar{
+    width: 43rem;
+    border: solid red;
+    border-radius: 12px;
+}
+
+
+
+    .progress {
+        text-align: center;
+        border-radius: 15px;
+        height: 12%;
+        background-color: green;
+
+    }
+    
