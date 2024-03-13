@@ -13,6 +13,28 @@
     border: solid red;
 }
 
+.sug{
+    border-bottom: 2px solid gray;
+}
+
+
+input{
+
+    border: rebeccapurple;
+    padding: 4px;
+    border-radius: 6px;
+
+}
+.sug_cont{
+    padding: 9px;
+    border-radius: 5px;
+    border: solid gray 2px;
+    max-width: 176px;
+
+    margin-top: 4px;
+    height: auto;
+}
+
 
 .progress-bar{
     width: 43rem;
@@ -23,6 +45,7 @@
 
 
     .progress {
+        width: 0%;
         text-align: center;
         border-radius: 15px;
         height: 12%;
@@ -30,3 +53,69 @@
 
     }
     
+
+
+
+    .footer .block-content-statick li a{
+        display: block;
+    }
+
+
+
+    .wrapper-progressBar {
+        width: 100%
+    }
+    
+    .progressBar {
+    }
+    
+    .progressBar li {
+        list-style-type: none;
+        float: left;
+        width: 33%;
+        position: relative;
+        text-align: center;
+    }
+    
+    .progressBar li:before {
+        content: " ";
+        line-height: 30px;
+        border-radius: 50%;
+        width: 17px;
+        height: 17px;
+        border: 1px solid #ddd;
+        border-left:none;
+        display: block;
+        text-align: center;
+        margin: 8.5px auto 0px;
+        background-color: #eee;
+    }
+    .progressBar li:after {
+        content: "";
+        position: absolute;
+        width: 97%;
+        height: 5px;
+        background-color: #eee;
+        border: 1px solid #ddd;
+        border-right:none;
+        top: 15px;
+        left: -50%;
+        z-index: -1;
+    }
+    
+    .progressBar li:first-child:after {
+        content: none;
+    }
+    
+    .progressBar li.active {
+        color: dodgerblue;
+    }
+    
+    .progressBar li.active:before {
+        border-color: dodgerblue;
+        background-color: dodgerblue
+    }
+    
+    .progressBar .active:after {
+        background-color: dodgerblue;
+    }
