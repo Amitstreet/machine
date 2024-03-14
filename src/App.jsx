@@ -11,6 +11,7 @@ import Time from './timer/time'
 import Bar from './progress_bar_1/bar_2'
 import Stepper from './Steper/steper'
 import Serch from './serch_auto/serch'
+import Pagination from './pagnation/page'
 
 
 
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <>
-     <Serch/>
+     <Pagination/>
     </>
   )
 }
